@@ -1,0 +1,17 @@
+<p>
+	<strong>Title:</strong>
+	<%= @item.title %>
+</p>
+
+<p>
+	<strong>Price:</strong>
+	<%= @item.price %>
+</p>
+
+<p>
+	<strong>Inventory:</strong>
+	<%= @item.inventory %>
+</p>
+<%= button_to "Purchase", :method => :purchase %>
+<!-- clicking this button should call the next method of Item, which should return and show the item with the next ID -->
+<%= button_to "Next", :method => :next %>

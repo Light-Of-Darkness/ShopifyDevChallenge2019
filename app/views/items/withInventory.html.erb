@@ -1,0 +1,19 @@
+<h1>Browse my wares!</h1>
+
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Price</th>
+		<th>Inventory</th>
+		<th></th>
+	</tr>
+	
+	<% @items.each do |item| %>
+		<tr>
+			<td><%= item.title %></td>
+			<td><%= item.price %></td>
+			<td><%= item.inventory %></td>
+			<td><%= button_to "Purchase", :method => :purchase %></td>
+		</tr>
+	<% end %>
+</table>

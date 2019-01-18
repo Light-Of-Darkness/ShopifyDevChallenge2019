@@ -1,0 +1,19 @@
+<h1>Item listings</h1>
+<%= link_to 'View only items with inventory', 'withInventory' %>
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Price</th>
+		<th>Inventory</th>
+		<th></th>
+	</tr>
+	
+	<% @items.each do |item| %>
+		<tr>
+			<td><%= item.title %></td>
+			<td><%= item.price %></td>
+			<td><%= item.inventory %></td>
+			<td><%= button_to "Purchase", :method => :purchase %></td>
+		</tr>
+	<% end %>
+</table>

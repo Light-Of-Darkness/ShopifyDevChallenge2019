@@ -1,0 +1,22 @@
+<h1>Enter a new item</h1>
+
+<%= form_with scope: :item, url: items_path, local: true do |form| %>
+<p>
+	<%= form.label :title%><br>
+	<%= form.text_field :title%>
+</p>
+
+<p>
+	<%= form.label :price %><br>
+	<%= form.number_field :price %>
+</p>
+
+<p>
+	<%= form.label :inventory %><br>
+	<%= form.number_field :inventory %>
+<p>
+
+<p>
+	<%= form.submit %>
+</p>
+<% end %>
